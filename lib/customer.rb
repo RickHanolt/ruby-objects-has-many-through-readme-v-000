@@ -24,10 +24,7 @@ class Customer
   end
 
   def waiters
-    this_customers_waiters = []
-    if Meal.customer = self
-      this_customers_waiters << waiter
-    end
+    
   end
 
 end

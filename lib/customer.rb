@@ -23,4 +23,11 @@ class Customer
     Meal.all.select{|meals| meals.customer == self}
   end
 
+  def waiters
+    this_customers_waiters = []
+    if meal.customer = self
+      this_customers_waiters << waiter
+    end
+  end
+
 end

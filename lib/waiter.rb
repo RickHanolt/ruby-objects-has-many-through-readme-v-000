@@ -22,13 +22,8 @@ class Waiter
   end
 
   def best_tipper
-    meals.each do |meal|
-      if biggest_tip = nil
-        biggest_tip = meal.tip
-      end
-      if biggest_tip < meal.tip
-        biggest_tip = meal.tip
-      end
+    best_tipped_meal = meals.max do |meal_a, meal_b|
+      meal_a.tip <=> meal_b.tip
     end
   end
   

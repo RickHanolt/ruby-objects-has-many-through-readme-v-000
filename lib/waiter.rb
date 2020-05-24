@@ -29,5 +29,7 @@ class Waiter
       if biggest_tip < meal.tip
         biggest_tip = meal.tip
       end
+    end
   end
+  
 end

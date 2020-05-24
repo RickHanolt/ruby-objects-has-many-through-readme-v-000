@@ -22,6 +22,7 @@ class Waiter
   end
 
   def best_tipper
+    meals.collect{|meal| meal.tip}.sort[-1]
 
   end
 end

@@ -22,7 +22,12 @@ class Waiter
   end
 
   def best_tipper
-    meals.collect{|meal| meal.tip}.sort[-1]
-
+    meals.each do |meal|
+      if biggest_tip = nil
+        biggest_tip = meal.tip
+      end
+      if biggest_tip < meal.tip
+        biggest_tip = meal.tip
+      end
   end
 end
